@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="header_1">
+
+        <span id="contactSpan">
+          <span id="iconPhone">
+            <img src="assets/siteStyle/iconPhone.png" alt="" width="34" height="32">
+          </span>
+          <p id="phNum"> + 380 99 77 88 555<br>
+            Daily from 7:55 to 20:05</p>
+        </span>
+
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgLDGjBBkmLwVBfHjpjJQXtwrqjXWlFlGVFcvlpfTQrQPNSHFFzrPpnFpbTVMhNsnVmQf" id="askUs">ASK US ANYTHING. EMAIL US</a>
+
+    <a routerLink="/add"><button class="button-12" id="registButton" role="button"><b class="b">Regi</b>&nbsp;ster</button></a>
+    <a href="/login"><button  class="button-12" id="logInButton" role="button"><b class="b">Log</b> In&nbsp;&nbsp;&nbsp;</button></a>
+  </div>
+
+
+  <div class="header_2">
+    <img id="logo" src="assets/siteStyle/logo.png" alt="Pills and Potions" width="100" height="100"
+    (click)="onEvent()">
+
+    <a href="http://localhost:8082/titleOfWork" class="logoText">
+      <p> <b id="pANDp">P&P</b><br>
+        <b id="pillsAndPotions">PILLS AND POTIONS</b></p>
+    </a>
+
+    <div class="menuItems">
+
+    </div>
+
+    <span id="greeting">Hi, {{fio}}</span>
+    <div class="coshAccountPosition">
+      <ng-content></ng-content>
+      <a href="#"><img class="coshAccountHover" src="assets/siteStyle/iconCoshik.png" alt="" width="70" height="70"></a>
+    </div>
+
+
+
+  </div>
+</div>

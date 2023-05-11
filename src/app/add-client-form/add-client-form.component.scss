@@ -1,0 +1,71 @@
+@use '@angular/material' as mat;
+@include mat.core();
+$my-primary: mat.define-palette(mat.$green-palette, 500);
+$my-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+@include mat.all-component-themes($my-theme);
+@include mat.typography-hierarchy($my-theme);
+
+
+.main{
+  padding-bottom: 200px;
+  margin: auto;
+  padding-top: 200px;
+  margin-bottom: -150px;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+
+mat-form-field{
+  margin: 10px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+.btn:hover {
+  background-color: #3e8e41;
+}
+.btn-danger {
+  background-color: #f44336;
+}
+
+.btn-danger:hover {
+  background-color: #ad1608;
+}
+
+.btn-warning {
+  background-color: #ff9800;
+}
+
+.btn-warning:hover {
+  background-color: #a66804;
+}
+
+.btn-info {
+  background-color: #00bcd4;
+}
+
+.btn-info:hover {
+  background-color: #018793;
+}
+
+

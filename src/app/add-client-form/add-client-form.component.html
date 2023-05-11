@@ -1,0 +1,111 @@
+<div class="main" fxLayout="column"  fxLayoutAlign="end center">
+  <div class="titleComponentDIV">
+    <!--<h1 id="titleComponent">User</h1>-->
+  </div>
+  <div class="listOfUsers" fxLayout="row wrap"  fxLayoutAlign="space-around none">
+    <mat-list *ngFor="let obj of savedUsers">
+      <mat-list-item fxLayout="row">
+        <button mat-button (click)="getData(obj.id)">{{obj.name}} - {{obj.id}}</button>
+        <i (click)="deleteData(obj.id)" style="cursor: pointer; color: #720000" class="material-icons">delete</i>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="AddContainer" fxLayout="row wrap">
+    <div class="brand-logoClient"></div>
+    <mat-card class="example-card" style="background-color: #0f4040">
+      <mat-card-title class="brand-title" fxLayoutAlign="center">User</mat-card-title>
+      <form [formGroup]="userFbForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center">
+        <mat-card-content class="inputs" fxLayout="column" fxLayoutAlign="start stretch">
+          <mat-form-field>
+            <mat-label>ID</mat-label>
+            <input matInput type="number" formControlName="id"  placeholder="ID">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>NAME</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Name">
+            <mat-error *ngIf="userFbForm.controls['name'].invalid  && userFbForm.controls['name'].touched">Name is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>LASTNAME</mat-label>
+            <input matInput type="text" formControlName="lastname" placeholder="Lastname">
+            <mat-error *ngIf="userFbForm.controls['lastname'].invalid  && userFbForm.controls['lastname'].touched">Lastname is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>EMAIL</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="pat@example.com">
+            <mat-error *ngIf="userFbForm.controls['lastname'].invalid  && userFbForm.controls['lastname'].touched">
+              Email is required and must be a valid email address</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>PASSWORD</mat-label>
+            <input matInput #inputPassword maxlength="6" [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Password">
+            <mat-hint align="end">{{inputPassword.value.length}}/6</mat-hint>
+            <mat-error *ngIf="userFbForm.controls['password'].invalid  && userFbForm.controls['password'].touched">
+              Password is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field *ngIf="disablBool != false">
+            <mat-label>CONFIRM PASSWORD</mat-label>
+            <input matInput #inputConfirmPassword maxlength="6" [type]="hide ? 'password' : 'text'" formControlName="confirmPassword" placeholder="Confirm Password">
+            <mat-hint align="end">{{inputConfirmPassword.value.length}}/6</mat-hint>
+            <mat-error *ngIf="userFbForm.controls['confirmPassword'].invalid  && userFbForm.controls['password'].touched">
+              Confirm password is required</mat-error>
+          </mat-form-field>
+
+          <mat-label>SEX</mat-label>
+          <mat-radio-group formControlName="sex">
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="male">Male</mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field>
+            <mat-label>PHONE</mat-label>
+            <input matInput type="tel" formControlName="phone" placeholder="Phone">
+            <mat-error *ngIf="userFbForm.controls['phone'].invalid  && userFbForm.controls['phone'].touched">
+              Phone is required and must be a valid phone number
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>DESCRIPTION</mat-label>
+            <textarea matInput formControlName="description" placeholder="Description"></textarea>
+          </mat-form-field>
+
+
+          <mat-label>TYPE</mat-label>
+          <mat-select placeholder="Type" formControlName="type">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mat-option>
+          </mat-select>
+
+          <!--SUBJECTS INPUT-->
+          <div formArrayName="subjects">
+            <mat-label>SUBJECTS</mat-label>
+              <button mat-button color="accent" class="buttonSumbit" type="button" (click)="addSubject()">Add subject</button>
+            <mat-form-field fxLayout="row" *ngFor="let subj of subjects.controls; let i = index">
+                <button mat-button color="accent" class="buttonSumbit" type="button" (click)="removeSubject(i)">-</button>
+              <input matInput [placeholder]="'Subject' + i+1" type="text" id="subj={{i}}" [formControlName]="i">
+            </mat-form-field>
+          </div>
+
+          <button type="submit" class="buttonSumbit" [disabled]="userFbForm.invalid && disablBool != false">
+            <p style="font-size: 16px; margin-top: 10px; cursor: pointer; color: #ffffff">Create</p>
+          </button>
+      </mat-card-content>
+    </form>
+
+    </mat-card>
+  </div>
+  <br>
+
+  <div fxLayout="row"  fxLayoutAlign="end center">
+    <br><button (click)="showSuccess()" class="btn">Button</button>
+    <br><button (click)="showError()" class="btn btn-danger">Error</button>
+    <br><button (click)="showWarning()" class="btn btn-warning">Warning</button>
+    <br><button (click)="showInfo()" class="btn btn-info">Info</button>
+  </div>
+
+</div>

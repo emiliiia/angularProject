@@ -1,0 +1,47 @@
+<div class="footer">
+  <div class="fourthGroundWork">
+    <p id = "foot_text">
+      500 Terry Francois Street.<br>
+      San Francisco, CA 94158  |  1-800-000-0000<br>
+    </p>
+
+    <div class="social">
+      <div class="icons child">
+        <a href="https://web.telegram.org/" title="Twitter" target="_blank"><img src="assets/siteStyle/iconTelegram.png" alt="" width="36px" ></a>
+      </div>
+      <div class="icons child">
+        <a href="https://www.viber.com/ru/" title="Viber" target="_blank"><img src="assets/siteStyle/iconViber.png" alt="" width="36px"></a>
+      </div>
+      <div class="icons child">
+        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="assets/siteStyle/facebook.png" alt="" width="36px"></a>
+      </div>
+      <div class="icons child">
+        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><img src="assets/siteStyle/instagram.png" alt="" width="36px"></a>
+      </div>
+      <div class="child">
+        <hr id="white">
+      </div>
+      <div class="child">
+        <a class="ctu" href="#"><button class="button-23"><b class="b">Conta</b>ct&nbsp;us</button></a>
+      </div>
+
+    </div>
+
+    <div id="footerMenu">
+      <div class="listsSideBySide">
+          <ul>
+            <li  *ngFor="let item of menuNav" routerLinkActive="active">
+              <a [routerLink]=item.src>
+                <span class="nav-text">{{item.label}}</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+    <img class="footerImg" src="assets/siteStyle/imgSelfMedication.png" alt="" width="1400px">
+    <p id="footerText">© 2022 The information posted on the electronic medical information system pillsandpotions.ua
+      is intended solely for informational purposes. Do not use the information on this site to diagnose,
+      treat, cure or prevent any disease. Diagnosis and choice of treatment is carried out only by your doctor! More about the disclaimer.</p>
+  </div>
+</div>

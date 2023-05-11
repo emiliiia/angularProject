@@ -1,0 +1,254 @@
+<div class="mainGroundwork">
+
+  <div class="slider">
+    <div class="slides">
+
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <div class="slide slide1 first">
+        <img src="assets/siteStyle/pills_1.png" alt="">
+        <a><button mat-button (click)="openDialog()" id="learnMoreButton" role="button">Learn more</button></a>
+      </div>
+
+      <div class="slide">
+        <img src="assets/adv/adv_1.png" alt="">
+      </div>
+
+      <div class="slide">
+        <img src="assets/adv/adv_2.png" alt="">
+      </div>
+
+      <div class="slide">
+        <img src="assets/adv/adv_3.png" alt="">
+      </div>
+
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+  </div>
+
+  <div id="pillsSecond">
+    <p class="readyMade">People list</p>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a (click)="goToPersonInfoPage(1)"><img src="assets/siteStyle/iconAccount.png" alt="" width="40px" height="">01-Anna Okorokova</a>
+        </li>
+        <li class="dropdown">
+          <a (click)="goToPersonInfoPage(2)"><img src="assets/siteStyle/iconAccount.png" alt="" width="40px" height="">02-Victor Velichko</a>
+        </li>
+        <li class="dropdown">
+          <a (click)="goToPersonInfoPage(3)"><img src="assets/siteStyle/iconAccount.png" alt="" width="40px" height="">03-Artem Labyak</a>
+        </li>
+        <li class="dropdown">
+          <a (click)="goToPersonInfoPage(4)"><img src="assets/siteStyle/iconAccount.png" alt="" width="40px" height="">04-Maria Gavrylo</a>
+        </li>
+        <li class="dropdown">
+          <a (click)="goToPersonInfoPage(5)"><img src="assets/siteStyle/iconAccount.png" alt="" width="40px" height="">05-Kate Doe</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<hr class="hrFirst">
+
+<br><br><br><br>
+<div class="chips" fxLayout="column" fxLayoutAlign="center">
+  <div class="tittleSection">
+    <p class="titlesOfSections">Leave a review</p><br>
+  </div>
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Video keywords</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter keywords" [formControl]="formControl" >
+      <mat-chip-row *ngFor="let keyword of keywords" (removed)="removeKeyword(keyword)">
+        {{keyword}}
+        <button matChipRemove aria-label="'remove ' + keyword">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    </mat-chip-grid>
+    <input placeholder="New keyword..."
+           [matChipInputFor]="chipGrid"
+           (matChipInputTokenEnd)="add($event)"/>
+  </mat-form-field>
+</div>
+<hr class="hrFirst">
+<div class="offerItems">
+  <div class="tittleSection" style="margin-left: -1150px; margin-top: 70px">
+    <p class="titlesOfSections">Top drugs</p><br>
+  </div>
+  <div fxLayoutAlign="center">
+    <table style="color: #102d3a" matSort (matSortChange)="sortData($event)">
+      <tr>
+        <th mat-sort-header="name">Medicine</th>
+        <th mat-sort-header="dosage">Dosage (mg)</th>
+        <th mat-sort-header="manufacturer">Manufacturer</th>
+        <th mat-sort-header="price">Price (g)</th>
+        <th mat-sort-header="quantity">Quantity</th>
+      </tr>
+
+      <tr *ngFor="let medicine of sortedData">
+        <td>{{medicine.name}}</td>
+        <td style="color: #720000">{{medicine.dosage}}</td>
+        <td>{{medicine.manufacturer}}</td>
+        <td style="color: #720000">{{medicine.price}}</td>
+        <td>{{medicine.quantity}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<hr class="hrFirst">
+
+<div class="secondGroundWork">
+  <div class="tittleSection">
+    <img src="assets/siteStyle/iconFire.png" alt="" width="50px">
+    <p class="titlesOfSections">Bestsellers</p>
+  </div>
+
+  <div>
+    <nav>
+      <ul class="navProductItems">
+        <li>
+          <div class="product-card">
+            <div class="logo-cart">
+            </div>
+            <div class="main-images">
+              <img class="first active" src="assets/product/pr_1.png" alt="">
+            </div>
+            <div class="shoe-details">
+              <span class="shoe_name">Ashwagandha Root Capsules</span>
+            </div>
+            <div class="color-price">
+              <div class="price">
+                <span class="price_num">$15.50</span>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-layer"></div>
+              <form action="">
+                <button>Add To Cart</button>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="product-card">
+            <div class="logo-cart">
+            </div>
+            <div class="main-images">
+              <img class="first active" src="assets/product/pr_2.png" alt="">
+            </div>
+            <div class="shoe-details">
+                    <span class="shoe_name">Tummy Soother Pastilles
+                    </span>
+            </div>
+            <div class="color-price">
+              <div class="price">
+                <span class="price_num">$4.25</span>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-layer"></div>
+              <form action="">
+                <button>Add To Cart</button>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="product-card">
+            <div class="logo-cart">
+            </div>
+            <div class="main-images">
+              <img class="first active" src="assets/product/pr_3.png" alt="">
+            </div>
+            <div class="shoe-details">
+              <span class="shoe_name">Alfalfa Extract</span>
+            </div>
+            <div class="color-price">
+              <div class="price">
+                <span class="price_num">$11.25</span>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-layer"></div>
+              <form action="">
+                <button>Add To Cart</button>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="product-card">
+            <div class="logo-cart">
+            </div>
+            <div class="main-images">
+              <img class="first active" src="assets/product/pr_4.png" alt="">
+            </div>
+            <div class="shoe-details">
+                    <span class="shoe_name">Adrenal Health Capsules
+                    </span>
+            </div>
+            <div class="color-price">
+              <div class="price">
+                <span class="price_num">$29.00</span>
+              </div>
+            </div>
+            <div class="button">
+              <div class="button-layer"></div>
+              <form action="">
+                <button>Add To Cart</button>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<hr class="hrFirst">
+<div class="thirdGroundWork">
+  <div class="tittleSection">
+    <img src="assets/siteStyle/iconBrand.png" alt="" height="60px">
+    <p class="titlesOfSections">Popular brands</p>
+  </div>
+
+  <div class="brandDiv">
+    <nav>
+      <ul class="nav_links">
+        <li><img src="assets/siteStyle/iconMountainRoseHerb.png" alt="" width="200px"></li>
+        <li><img src="assets/siteStyle/iconBayer.png" alt="" width="70px"></li>
+        <li><img src="assets/siteStyle/iconColoplast.webp" alt="" width="200px" ></li>
+        <li><img src="assets/siteStyle/iconPfizer.svg" alt="" width="100px"></li>
+        <li><img src="assets/siteStyle/iconPG.png" alt="" width="150px"></li>
+      </ul>
+    </nav>
+  </div>
+</div>

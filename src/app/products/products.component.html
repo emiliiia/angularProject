@@ -1,0 +1,115 @@
+<!-- Cards with media area -->
+<div class="main" >
+  <div class="name" fxLayoutAlign="center">
+    <h1>Products</h1>
+  </div>
+
+  <div class="coshAccountPosition">
+    <a><img [ngClass]="{'changeImg':bool, 'changeImg2': !bool}" (click)="boolChange()" class="coshAccountHover" alt=""
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55" height="55"></a>
+  </div>
+  <div  style="margin-top: 100px;" fxLayout="row wrap" fxLayoutAlign="space-evenly center" *ngIf="bool != false; else another">
+    <mat-card class="example-card-first" *ngFor="let item of data">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-subtitle>${{item.price}}</mat-card-subtitle>
+          <img mat-card-sm-image [src]="'assets/product/pr_' + item.id+ '.png'"  alt="">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <ng-template style="margin-top: 400px;" #another fxLayout="column" fxLayoutAlign="space-between center">
+    <mat-card class="example-card-second" *ngFor="let item of data" >
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-subtitle>${{item.price}}</mat-card-subtitle>
+          <img mat-card-sm-image [src]="'assets/product/pr_' + item.id+ '.png'" alt="">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+
+</div>
+<!--div class="main" >
+    <div class="name">
+      <h1>Products</h1>
+    </div>
+
+    <div class="coshAccountPosition">
+      <a><img [ngClass]="{'changeImg':bool, 'changeImg2': !bool}" (click)="boolChange()" class="coshAccountHover" alt=""
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55" height="55"></a>
+    </div>
+    <div class="products">
+      <nav *ngIf="bool != false; else another">
+        <ul class="navProductItems2">
+          <ng-container *ngFor="let item of data">
+            <li *ngIf="!item.hide" [ngSwitch]="item.type">
+              <div class="product-card2">
+                <div class="main-images">
+                  <img class="first active" [src]="'assets/product/pr_' + item.id+ '.png'" alt="">
+                </div>
+                <div class="shoe-details">
+                  <span class="shoe_name"  *ngSwitchCase="1">{{item.name}}</span>
+                  <span class="shoe_name" *ngSwitchCase="2" [ngStyle]="{'color': 'red'}">{{item.name}}</span>
+                </div>
+                <div class="color-price2">
+                  <div class="price">
+                    <span class="price_num">${{item.price}}</span>
+                  </div>
+                </div>
+                <div class="button">
+                  <div class="button-layer"></div>
+                  <form action="">
+                    <button>Add To Cart</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+          </ng-container>
+        </ul>
+      </nav>
+
+      <ng-template #another>
+        <nav>
+          <ul class="navProductItems">
+            <ng-container *ngFor="let item of data">
+              <li *ngIf="!item.hide" [ngSwitch]="item.type">
+                <div class="product-card">
+                  <div class="logo-cart">
+                  </div>
+                  <div class="main-images">
+                    <img class="first active" [src]="'assets/product/pr_' + item.id+ '.png'" alt="">
+                  </div>
+                  <div class="shoe-details">
+                    <span class="shoe_name"  *ngSwitchCase="1">{{item.name}}</span>
+                    <span class="shoe_name" *ngSwitchCase="2" [ngStyle]="{'color': 'red'}">{{item.name}}</span>
+                  </div>
+                  <div class="color-price">
+                    <div class="price">
+                      <span class="price_num">${{item.price}}</span>
+                    </div>
+                  </div>
+                  <div class="button">
+                    <div class="button-layer"></div>
+                    <form action="">
+                      <button>Add To Cart</button>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </nav>
+      </ng-template>
+    </div>
+  </div-->
+

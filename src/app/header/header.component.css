@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+
+/*HEADER + MENU*/
+
+
+.header{
+  margin: auto;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+/*RED_HEADER*/
+.header_1{
+  position: fixed;
+  align-items: center;
+  justify-content:center;
+  display:inline-flex;
+  background-color: #042C2C;
+
+  width: 100%;
+  height: 50px;
+
+  margin: auto;
+
+  font-family: 'Baloo 2', cursive;
+  color: rgb(255, 255, 255);
+}
+
+#contactSpan{
+  position: fixed;
+  margin-right: 1190px;
+}
+
+#iconPhone{
+  position: fixed;
+}
+
+#phNum{
+  width: 150px;
+  height: 20px;
+
+  font-family: 'Alfa Slab One', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+
+  color: #D84B04;
+  margin-top: -4px;
+  margin-left: 40px;
+}
+
+#askUs{
+  position: fixed;
+  font-family: 'Baloo 2', cursive;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+}
+
+#registButton{
+  position: relative;
+  margin-left: 1190px;
+}
+
+#logInButton{
+  position: relative;
+  margin-left: 20px;
+}
+
+.b{
+  color: #042C2C;
+}
+
+#pillImg{
+  margin: auto;
+  background: url(src/assets/siteStyle/logo.png) no-repeat center;
+  height: 749px;
+  width: 1140px;
+  left: 0;
+  top: 156px;
+  padding-top: 882px;
+  border-radius: 0;
+
+}
+
+.button-12 {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  background: url(src/assets/siteStyle/button.png) no-repeat center;
+  background-position: center;
+  cursor: pointer;
+
+  width: 80px;
+  height: 30px;
+
+  border-radius: 30px;
+  border-style: none;
+  box-shadow: #042C2C 0 -2px 6px inset;
+
+  margin: 0;
+
+  color: #D3F8F4;
+  font-family: 'Baloo 2', cursive;
+  font-size: 15px;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+.button-12:hover {
+  background: url(src/assets/siteStyle/button_2.png) no-repeat center;
+  box-shadow: #6c2401 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-12:active {
+  transform: scale(1.025);
+}
+
+/*PINK_HEADER*/
+
+.header_2{
+  position: fixed;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content:center;
+
+  background-color: #fedac4;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.50);
+
+  width: 100%;
+  height: 130px;
+
+  margin: auto;
+  margin-top: 50px;
+}
+
+#logo{
+  position: fixed;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 0;
+  margin-left: -1250px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+
+
+.logoText{
+  position: fixed;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 0;
+  margin-left: -1000px;
+  margin-right: 25px;
+}
+
+#pANDp{
+  color: #D84B04;
+  font-size: 25px;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+#pillsAndPotions{
+  color: #2F7474;
+  font-size: 14px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.menuItems{
+  width: 566px;
+  height: 50px;
+
+  margin: auto;
+  margin-top: 35px;
+  border-radius: 40px;
+  border: 0 #2F7474 solid;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 16px;
+  background-color: #fedac4;
+}
+
+
+.coshAccountPosition{
+  position: absolute;
+  margin-left: 1250px;
+}
+
+#greeting{
+  color: #D84B04;
+  font-size: 16px;
+  font-family: 'Alfa Slab One', cursive;
+
+  position: fixed;
+  text-decoration: none;
+  text-align: right;
+  margin-top: 10px;
+  margin-right: -950px;
+  margin-left: 25px;
+}
+
+.coshAccountHover:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+/*SEARCH FIELD*/
+
+.searchBox {
+  background: #D84B04;
+  border-radius: 40px;
+
+  width: 566px;
+  height: 50px;
+
+  position: fixed;
+  margin: auto;
+
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.searchInput{
+  color: rgb(255, 255, 255);
+  width: 460px;
+  height: 20px;
+
+  margin-left: 28px;
+  margin-top: 15px;
+  border:none;
+  background: none;
+  outline:none;
+  float:left;
+  font-size: 20px;
+}
+
+.searchInput::placeholder{
+  color: rgba(255, 255, 255, 0.712);
+}
+
+#searchButton{
+  position: fixed;
+  background: transparent;
+  border: 0;
+  margin-left: 15px;
+  margin-top: 6px;
+  cursor: pointer;
+  border-radius: 30%;
+}
+
+#searchButton:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+

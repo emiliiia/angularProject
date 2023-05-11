@@ -1,0 +1,150 @@
+.active a{
+  color: rgb(194, 67, 50);
+}
+
+
+.footer{
+  background-color: #042C2C;
+
+  width: 100%;
+  height: 700px;
+
+  align-items: center;
+  justify-content:center;
+
+  z-index: -1;
+  bottom: 0;
+
+  margin-top: 20px;
+
+  font-family: 'Baloo 2', cursive;
+  color: rgb(255, 255, 255);
+}
+
+a{
+  color: rgb(255, 255, 255);
+}
+
+.b{
+  color: #042C2C;
+}
+
+.fourthGroundWork{
+  width: 1400px;
+  height: 200px;
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  justify-content: center;
+  background-color: #0bffff00;
+}
+
+.footerImg{
+  margin: auto;
+  margin-top: 10px;
+}
+
+#footerText{
+  text-align: center;
+  font-size: 18px;
+}
+
+#foot_text{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.social{
+  height: 45px;
+  width: 367px;
+  border-radius: 0;
+  margin: auto;
+}
+
+.icons{
+  margin-right: 8px;
+  border-radius: 0;
+}
+
+.icons:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.child{
+  float: left;
+}
+
+.ctu{
+  height: 33px;
+  width: 114px;
+  border-radius: 0;
+  margin-left: 28px;
+}
+
+#white{
+  width: 1px;
+  height: 45px;
+  margin-top: -5px;
+  margin-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 1)
+}
+
+.button-23 {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  background: url(src/assets/siteStyle/button_3.png) no-repeat center;
+  background-position: center;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+
+  border-radius: 30px;
+  border-style: none;
+  box-shadow: #042C2C 0 -2px 6px inset;
+
+  margin: 0;
+
+  color: #D3F8F4;
+  font-family: 'Baloo 2', cursive;
+  font-size: 15px;
+
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+.button-23:hover {
+  background: url(src/assets/siteStyle/button_4.png) no-repeat center;
+  box-shadow: #6c2401 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-23:active {
+  transform: scale(1.025);
+}
+
+#footerMenu{
+  position: relative;
+  left: -370px;
+  margin: auto;
+}
+
+.listsSideBySide{
+  display:inline-block;
+  width:150px;
+  vertical-align:top;
+}
+
+.listsSideBySide ul{
+  list-style: none;
+}

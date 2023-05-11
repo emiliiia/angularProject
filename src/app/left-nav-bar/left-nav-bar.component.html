@@ -1,0 +1,15 @@
+<nav class="main-menu">
+  <ul >
+    <p></p>
+    <br>
+    <span id="titleSpan" class="nav-text">
+                Menu
+                </span>
+    <li *ngFor="let item of menuNav" routerLinkActive="active">
+      <a [routerLink]=item.src>
+        <i><img [src]=item.photoPath alt="" width="50" height="50"></i>
+        <span class="nav-text"> {{item.label}}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

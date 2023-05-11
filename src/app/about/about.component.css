@@ -1,0 +1,38 @@
+.main{
+  width: 1140px;
+
+  padding-bottom: 200px;
+
+  margin: auto;
+  padding-top: 160px;
+  margin-bottom: -150px;
+  background-color: rgba(255, 0, 0, 0);
+
+  justify-content:center;
+}
+
+.name{
+  background-color: rgba(255, 81, 0, 0);
+  height: 50px;
+  width: 290px;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+
+  font-family: 'Alfa Slab One', cursive;
+  color: #042C2C;
+  font-weight: normal;
+}
+
+#photo{
+  float:left; /* Вирівнювання по лівому краю */
+  margin: 10px 10px 10px 0; /* Відступи навколо картинки */
+  border-radius: 30px;
+  width: 700px;
+}
+
+p{
+  font-size: 20px;
+  font-family: 'Baloo 2', cursive;
+  color: #f9e6da;
+}

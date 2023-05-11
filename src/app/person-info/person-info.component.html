@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="titleComponentDIV">
+    <h1 id="titleComponent">User</h1>
+  </div>
+  <div style="height: 580px" class="AddContainer">
+    <div class="brand-logoClient"></div>
+    <div class="brand-title">User</div>
+    <form name="client" action="" method="post">
+      <div class="inputs" >
+        <label>NAME</label>
+        <p>{{user.name}} {{user.lastname}}</p>
+        <label>SALARY</label>
+        <p>{{user.salary | currency:'UAH'}}</p>
+        <label>WORKING HOURS</label>
+        <p>{{user.workingHours  | roundNumber }}</p>
+        <label>DATE OF BIRTH</label>
+        <p>{{user.dateOfBirth | date:'dd.MM.yyyy'}}</p>
+      </div>
+    </form>
+  </div>
+
+</div>
